@@ -31,7 +31,7 @@ services:
       OPENPARTNER_MODE: selfhost
       OPENPARTNER_TENANCY: single
       OPENPARTNER_ENABLE_SCHEDULER: "1"
-      PORTAL_URL: https://partners.lumimusic.ai
+      PORTAL_URL: ${PORTAL_URL}
       METRICS_TOKEN: ${METRICS_TOKEN}
     expose:
       - '4601'
@@ -48,7 +48,7 @@ services:
       NODE_ENV: production
       DATABASE_URL: postgres://openpartner:${POSTGRES_PASSWORD}@postgres:5432/openpartner
       ROUTER_PORT: 4701
-      COOKIE_DOMAIN: .lumimusic.ai
+      COOKIE_DOMAIN: ${COOKIE_DOMAIN}
     expose:
       - '4701'
 
